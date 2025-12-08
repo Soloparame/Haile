@@ -1,9 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { services } from '@/constants/data'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function ServicesSection() {
+  const { t } = useLanguage()
+
   return (
     <section className="py-20 bg-primary-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,14 +16,14 @@ export default function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Our Services</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">{t.ourServices}</h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Comprehensive solutions to help your business grow and succeed in the digital world.
+            {t.servicesSubtitle}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {t.servicesList.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

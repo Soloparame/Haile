@@ -3,9 +3,15 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { t, language, setLanguage } = useLanguage()
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'am' : 'en')
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary-dark/95 backdrop-blur-sm border-b border-primary-green/10">
@@ -21,26 +27,34 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-white/80 hover:text-primary-green transition-colors">
-              Product
+            <Link href="/product" className="text-white/80 hover:text-primary-green transition-colors">
+              {t.product}
             </Link>
-            <Link href="/services" className="text-white/80 hover:text-primary-green transition-colors">
-              Pricing
+            <Link href="/pricing" className="text-white/80 hover:text-primary-green transition-colors">
+              {t.pricing}
             </Link>
-            <Link href="/about" className="text-white/80 hover:text-primary-green transition-colors">
-              Company
+            <Link href="/company" className="text-white/80 hover:text-primary-green transition-colors">
+              {t.company}
             </Link>
-            <Link href="/portfolio" className="text-white/80 hover:text-primary-green transition-colors">
-              Blog
+            <Link href="/blog" className="text-white/80 hover:text-primary-green transition-colors">
+              {t.blog}
             </Link>
-            <Link href="/contact" className="text-white/80 hover:text-primary-green transition-colors">
-              Faq&apos;s
+            <Link href="/faq" className="text-white/80 hover:text-primary-green transition-colors">
+              {t.faq}
             </Link>
+
+            <button
+              onClick={toggleLanguage}
+              className="px-3 py-1 rounded border border-white/20 text-white hover:bg-white/10 transition-colors"
+            >
+              {language === 'en' ? '🇪🇹 Amharic' : '🇺🇸 English'}
+            </button>
+
             <Link
               href="/contact"
               className="px-6 py-2.5 bg-primary-green text-primary-dark font-medium rounded-lg glow-green hover:bg-primary-green/90 transition-all"
             >
-              Contact Us
+              {t.contactUs}
             </Link>
           </div>
 
@@ -76,26 +90,34 @@ export default function Header() {
             exit={{ opacity: 0, y: -20 }}
             className="md:hidden py-4 space-y-4 border-t border-primary-green/10"
           >
-            <Link href="/" className="block text-white/80 hover:text-primary-green transition-colors">
-              Product
+            <Link href="/product" className="block text-white/80 hover:text-primary-green transition-colors">
+              {t.product}
             </Link>
-            <Link href="/services" className="block text-white/80 hover:text-primary-green transition-colors">
-              Pricing
+            <Link href="/pricing" className="block text-white/80 hover:text-primary-green transition-colors">
+              {t.pricing}
             </Link>
-            <Link href="/about" className="block text-white/80 hover:text-primary-green transition-colors">
-              Company
+            <Link href="/company" className="block text-white/80 hover:text-primary-green transition-colors">
+              {t.company}
             </Link>
-            <Link href="/portfolio" className="block text-white/80 hover:text-primary-green transition-colors">
-              Blog
+            <Link href="/blog" className="block text-white/80 hover:text-primary-green transition-colors">
+              {t.blog}
             </Link>
-            <Link href="/contact" className="block text-white/80 hover:text-primary-green transition-colors">
-              Faq&apos;s
+            <Link href="/faq" className="block text-white/80 hover:text-primary-green transition-colors">
+              {t.faq}
             </Link>
+
+            <button
+              onClick={toggleLanguage}
+              className="w-full text-left px-3 py-1 text-white hover:text-primary-green transition-colors"
+            >
+              {language === 'en' ? '🇪🇹 Switch to Amharic' : '🇺🇸 Switch to English'}
+            </button>
+
             <Link
               href="/contact"
               className="inline-block px-6 py-2.5 bg-primary-green text-primary-dark font-medium rounded-lg glow-green"
             >
-              Contact Us
+              {t.contactUs}
             </Link>
           </motion.div>
         )}

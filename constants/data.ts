@@ -1,40 +1,64 @@
 export const services = [
   {
     id: 1,
-    title: 'Web Development',
-    description: 'Custom web applications built with modern technologies and best practices.',
+    title: 'Websites', // Simplified from Web Development
+    description: 'We make websites that look good and work well on computers and phones.',
     icon: '🌐',
   },
   {
     id: 2,
     title: 'Mobile Apps',
-    description: 'Native and cross-platform mobile applications for iOS and Android.',
+    description: 'We build apps for iPhones and Android phones that are easy to use.',
     icon: '📱',
   },
   {
     id: 3,
-    title: 'UI/UX Design',
-    description: 'Beautiful, intuitive interfaces that provide exceptional user experiences.',
+    title: 'Design', // Simplified from UI/UX Design
+    description: 'We design beautiful and easy-to-use interfaces for your customers.',
     icon: '🎨',
   },
   {
     id: 4,
-    title: 'Cloud Deployment',
-    description: 'Seamless deployment and scaling on modern cloud infrastructure.',
+    title: 'Cloud Storage', // Simplified from Cloud Deployment
+    description: 'We help you save your files safely on the internet so you can access them anywhere.',
     icon: '☁️',
   },
   {
     id: 5,
-    title: 'API Development',
-    description: 'Robust and scalable APIs to power your applications.',
+    title: 'Connections', // Simplified from API Development
+    description: 'We help your different computer programs talk to each other.', // Simplified
     icon: '🔌',
   },
   {
     id: 6,
-    title: 'DevOps',
-    description: 'Streamlined development workflows and automated deployment pipelines.',
+    title: 'Maintenance', // Simplified from DevOps
+    description: 'We keep your website and apps running smoothly without problems.',
     icon: '⚙️',
   },
+]
+
+export const ourProducts = [
+  {
+    id: 1,
+    title: 'Product One',
+    description: 'Description of your first amazing product.',
+    image: '/product-placeholder.jpg',
+    link: '#'
+  },
+  {
+    id: 2,
+    title: 'Product Two',
+    description: 'Description of your second amazing product.',
+    image: '/product-placeholder.jpg',
+    link: '#'
+  },
+  {
+    id: 3,
+    title: 'Product Three',
+    description: 'Description of your third amazing product.',
+    image: '/product-placeholder.jpg',
+    link: '#'
+  }
 ]
 
 export const techStack = [
@@ -68,6 +92,7 @@ export const portfolioItems = [
     supporters: '2.5k',
     type: 'supporters',
     image: '/portfolio-2.jpg',
+    icon: '🎙️'
   },
   {
     id: 3,
@@ -118,4 +143,3 @@ export const testimonials = [
     avatar: '/testimonial-3.jpg',
   },
 ]
-
