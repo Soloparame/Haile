@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { testimonials } from '@/constants/data'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function TestimonialsSection() {
+  const { t } = useLanguage()
   return (
     <section className="py-20 bg-primary-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,9 +16,9 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">What Our Clients Say</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">{t.whatOurClientsSay}</h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
+            {t.testimonialsSubtitle}
           </p>
         </motion.div>
 

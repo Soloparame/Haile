@@ -36,7 +36,7 @@ export default function FAQPage() {
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">{t.faq}</h1>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Common questions about our services.
+                        {t.faqSubtitle}
                     </p>
                 </div>
 

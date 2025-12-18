@@ -26,6 +26,9 @@ export default function OurProductsSection() {
                     <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-green to-blue-500 mb-4">
                         {t.ourProducts}
                     </h2>
+                    <p className="text-gray-400 max-w-2xl mx-auto">
+                        {t.ourProductsSubtitle}
+                    </p>
                     <div className="w-20 h-1 bg-primary-green mx-auto rounded-full" />
                 </motion.div>
 

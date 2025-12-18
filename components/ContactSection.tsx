@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function ContactSection() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,10 +36,10 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Get In Touch
+              {t.getInTouch}
             </h2>
             <p className="text-white/70 text-lg mb-8 leading-relaxed">
-              Have a project in mind? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
+              {t.contactSubtitle}
             </p>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -47,7 +49,7 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-1">Email</h3>
+                  <h3 className="text-white font-semibold mb-1">{t.email}</h3>
                   <a href="mailto:info@devcore.com" className="text-primary-green hover:underline">
                     info@devcore.com
                   </a>
@@ -60,7 +62,7 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-1">Phone</h3>
+                  <h3 className="text-white font-semibold mb-1">{t.phone}</h3>
                   <a href="tel:+1234567890" className="text-primary-green hover:underline">
                     +1 (234) 567-890
                   </a>
@@ -79,7 +81,7 @@ export default function ContactSection() {
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-white font-medium mb-2">
-                    Name
+                    {t.name}
                   </label>
                   <input
                     type="text"
@@ -94,7 +96,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-white font-medium mb-2">
-                    Email
+                    {t.email}
                   </label>
                   <input
                     type="email"
@@ -109,7 +111,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-white font-medium mb-2">
-                    Message
+                    {t.message}
                   </label>
                   <textarea
                     id="message"
@@ -126,7 +128,7 @@ export default function ContactSection() {
                   type="submit"
                   className="w-full px-6 py-3 bg-primary-green text-primary-dark font-semibold rounded-lg glow-green hover:bg-primary-green/90 transition-all"
                 >
-                  Send Message
+                  {t.sendMessage}
                 </button>
               </div>
             </form>

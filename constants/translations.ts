@@ -19,6 +19,55 @@ export const translations = {
         servicesSubtitle: 'Comprehensive solutions to help your business grow and succeed in the digital world.',
         ourProducts: 'Our Products',
         testimonials: 'What People Say',
+        aboutDevCore: 'About DevCore',
+        aboutDevCoreSubtitle: 'Learn more about who we are and what we do.',
+        ourTechStack: 'Our Tech Stack',
+        whatOurClientsSay: 'What Our Clients Say',
+        getInTouch: 'Get In Touch',
+        faqSubtitle: 'Common questions about our services.',
+        frequentlyAskedQuestions: 'Frequently Asked Questions',
+
+        // Tech Stack
+        techStackSubtitle: 'We work with the latest technologies and tools to build modern, scalable solutions.',
+
+        // Testimonials
+        testimonialsSubtitle: 'Don\'t just take our word for it. Here\'s what our clients have to say about working with us.',
+
+        // Footer
+        footerDescription: 'From crafting stunning designs to building robust software and deploying it seamlessly, we\'re here to help your business shine.',
+        quickLinks: 'Quick Links',
+        home: 'Home',
+        services: 'Services',
+        contact: 'Contact',
+        rightsReserved: 'All rights reserved.',
+
+        // About Section
+        aboutDescription1: 'We are a team of passionate developers, designers, and engineers dedicated to transforming your ideas into reality. With years of experience in the industry, we combine creativity with technical expertise to deliver exceptional results.',
+        aboutDescription2: 'Our mission is to help businesses thrive in the digital world by providing cutting-edge solutions that are both beautiful and functional. We believe in building long-term partnerships with our clients, understanding their unique needs, and delivering value that exceeds expectations.',
+        projectsCompleted: 'Projects Completed',
+        happyClients: 'Happy Clients',
+        yearsExperience: 'Years Experience',
+        ourVision: 'Our Vision',
+        visionDescription: 'To be the leading digital solutions provider, recognized for innovation, quality, and client success.',
+        ourValues: 'Our Values',
+        valuesDescription: 'Integrity, innovation, and excellence guide everything we do. We are committed to delivering solutions that make a difference.',
+        ourApproach: 'Our Approach',
+        approachDescription: 'We work collaboratively with our clients, ensuring transparency, communication, and alignment throughout the entire process.',
+
+        // Our Products Section
+        ourProductsSubtitle: 'Discover the tools and solutions we\'ve built to help you succeed.',
+
+        // Blog Section
+        blogSubtitle: 'Insights, updates, and news from our team.',
+
+        // Contact Section
+        contactSubtitle: 'Have a project in mind? We\'d love to hear from you. Send us a message and we\'ll respond as soon as possible.',
+        messageSent: 'Message Sent',
+        sendMessage: 'Send Message',
+        name: 'Name',
+        email: 'Email',
+        message: 'Message',
+        phone: 'Phone',
 
         // Detailed Data Arrays
         servicesList: [
@@ -80,6 +129,55 @@ export const translations = {
         servicesSubtitle: 'ንግድዎ በዲጂታል ዓለም ውስጥ እንዲያድግ እና እንዲሳካ አጠቃላይ መፍትሄዎች።',
         ourProducts: 'ምርቶቻችን',
         testimonials: 'ሰዎች ምን ይላሉ',
+        aboutDevCore: 'ስለ ዴቭኮር',
+        aboutDevCoreSubtitle: 'እኛ ማን እንደሆንን እና ምን እንደምንሰራ የበለጠ ይወቁ።',
+        ourTechStack: 'የቴክኖሎጂ ክምችታችን',
+        whatOurClientsSay: 'ደንበኞቻችን ምን ይላሉ',
+        getInTouch: 'ያግኙን',
+        faqSubtitle: 'ስለ አገልግሎቶቻችን የተለመዱ ጥያቄዎች።',
+        frequentlyAskedQuestions: 'በተደጋጋሚ የሚጠየቁ ጥያቄዎች',
+
+        // Tech Stack
+        techStackSubtitle: 'ዘመናዊ እና ሊሰፉ የሚችሉ መፍትሄዎችን ለመገንባት በዘመናዊ ቴክኖሎጂዎች እና መሳሪያዎች እንሰራለን።',
+
+        // Testimonials
+        testimonialsSubtitle: 'የእኛን ቃል ብቻ አይቀበሉ። ደንበኞቻችን ከእኛ ጋር ስለመስራት ምን እንደሚሉ እነሆ።',
+
+        // Footer
+        footerDescription: 'አስደናቂ ንድፎችን ከመስራት ጀምሮ ጠንካራ ሶፍትዌሮችን መገንባት እና በብቃት መተግበር ድረስ፣ ንግድዎ እንዲበራ ለማገዝ እዚህ ነን።',
+        quickLinks: 'ፈጣን ሊንኮች',
+        home: 'መነሻ',
+        services: 'አገልግሎቶች',
+        contact: 'ያግኙን',
+        rightsReserved: 'መብቱ በህግ የተጠበቀ ነው።',
+
+        // About Section
+        aboutDescription1: 'ሀሳቦችዎን ወደ እውነታ ለመቀየር ቁርጠኛ የሆኑ ቀናተኛ ገንቢዎች፣ ዲዛይነሮች እና መሐንዲሶች ቡድን ነን። በኢንዱስትሪው ውስጥ ባለን ዓመታት ልምድ፣ ፈጠራን ከቴክኒካል እውቀት ጋር በማጣመር ልዩ ውጤቶችን እናቀርባለን።',
+        aboutDescription2: 'ተልእኳችን ንግዶችን በዲጂታል ዓለም ውስጥ እንዲበለጽጉ የሚያግዙ ቆንጆ እና ተግባራዊ፣ ዘመናዊ መፍትሄዎችን በማቅረብ መርዳት ነው። ከደንበኞቻችን ጋር የረጅም ጊዜ አጋርነት በመገንባት፣ ልዩ ፍላጎቶቻቸውን በመረዳት እና ከሚጠበቀው በላይ ዋጋ በማቅረብ እናምናለን።',
+        projectsCompleted: 'የተጠናቀቁ ፕሮጀክቶች',
+        happyClients: 'ደስተኛ ደንበኞች',
+        yearsExperience: 'ዓመታት ልምድ',
+        ourVision: 'ራዕያችን',
+        visionDescription: 'በፈጠራ፣ በጥራት እና በደንበኛ ስኬት የሚታወቅ መሪ የዲጂታል መፍትሄዎች አቅራቢ መሆን።',
+        ourValues: 'እሴቶቻችን',
+        valuesDescription: 'ታማኝነት፣ ፈጠራ እና የላቀ ደረጃ የምንሰራውን ሁሉ ይመራሉ። ለውጥ የሚያመጡ መፍትሄዎችን ለማቅረብ ቁርጠኛ ነን።',
+        ourApproach: 'አቀራረባችን',
+        approachDescription: 'ከደንበኞቻችን ጋር በጋራ እንሰራለን፣ በሂደቱ በሙሉ ግልፅነትን፣ ግንኙነትን እና መግባባትን እናረጋግጣለን።',
+
+        // Our Products Section
+        ourProductsSubtitle: 'እርስዎን ለመርዳት የገነባናቸውን መሳሪያዎች እና መፍትሄዎች ያግኙ።',
+
+        // Blog Section
+        blogSubtitle: 'ከቡድናችን ግንዛቤዎች፣ ዝመናዎች እና ዜናዎች።',
+
+        // Contact Section
+        contactSubtitle: 'ሃሳብ አለዎት? ከእርስዎ መስማት እንፈልጋለን። መልእክት ይላኩልን እና በተቻለ ፍጥነት ምላሽ እንሰጣለን።',
+        messageSent: 'መልእክት ተልፏል',
+        sendMessage: 'መልእክት ላክ',
+        name: 'ስም',
+        email: 'ኢሜይል',
+        message: 'መልእክት',
+        phone: 'ስልክ',
 
         // Detailed Data Arrays
         servicesList: [

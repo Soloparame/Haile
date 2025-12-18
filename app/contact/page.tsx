@@ -2,8 +2,10 @@
 
 import ContactSection from '@/components/ContactSection'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function ContactPage() {
+  const { t } = useLanguage()
   return (
     <div className="pt-20">
       <section className="py-20 bg-primary-dark">
@@ -15,7 +17,7 @@ export default function ContactPage() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
-              Contact Us
+              {t.contactUs}
             </h1>
             <p className="text-xl text-white/70 leading-relaxed">
               Have a project in mind? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
@@ -35,9 +37,9 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">{t.frequentlyAskedQuestions}</h2>
             <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              Find answers to common questions about our services.
+              {t.faqSubtitle}
             </p>
           </motion.div>
 

@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { techStack } from '@/constants/data'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function TechStackSection() {
+  const { t } = useLanguage()
   const categories = Array.from(new Set(techStack.map(tech => tech.category)))
 
   return (
@@ -16,9 +18,9 @@ export default function TechStackSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Our Tech Stack</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">{t.ourTechStack}</h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            We work with the latest technologies and tools to build modern, scalable solutions.
+            {t.techStackSubtitle}
           </p>
         </motion.div>
 

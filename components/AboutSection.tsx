@@ -1,8 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function AboutSection() {
+  const { t } = useLanguage()
   return (
     <section className="py-20 bg-primary-gray">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,26 +16,26 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              About DevCore
+              {t.aboutDevCore}
             </h2>
             <p className="text-white/70 text-lg mb-6 leading-relaxed">
-              We are a team of passionate developers, designers, and engineers dedicated to transforming your ideas into reality. With years of experience in the industry, we combine creativity with technical expertise to deliver exceptional results.
+              {t.aboutDescription1}
             </p>
             <p className="text-white/70 text-lg mb-8 leading-relaxed">
-              Our mission is to help businesses thrive in the digital world by providing cutting-edge solutions that are both beautiful and functional. We believe in building long-term partnerships with our clients, understanding their unique needs, and delivering value that exceeds expectations.
+              {t.aboutDescription2}
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-primary-green/10 border border-primary-green/20 rounded-lg px-6 py-4">
                 <div className="text-3xl font-bold text-primary-green mb-1">500+</div>
-                <div className="text-white/60 text-sm">Projects Completed</div>
+                <div className="text-white/60 text-sm">{t.projectsCompleted}</div>
               </div>
               <div className="bg-primary-green/10 border border-primary-green/20 rounded-lg px-6 py-4">
                 <div className="text-3xl font-bold text-primary-green mb-1">200+</div>
-                <div className="text-white/60 text-sm">Happy Clients</div>
+                <div className="text-white/60 text-sm">{t.happyClients}</div>
               </div>
               <div className="bg-primary-green/10 border border-primary-green/20 rounded-lg px-6 py-4">
                 <div className="text-3xl font-bold text-primary-green mb-1">10+</div>
-                <div className="text-white/60 text-sm">Years Experience</div>
+                <div className="text-white/60 text-sm">{t.yearsExperience}</div>
               </div>
             </div>
           </motion.div>
@@ -52,9 +54,9 @@ export default function AboutSection() {
                     <span className="text-primary-green text-2xl">🎯</span>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-2">Our Vision</h3>
+                    <h3 className="text-white font-semibold mb-2">{t.ourVision}</h3>
                     <p className="text-white/60">
-                      To be the leading digital solutions provider, recognized for innovation, quality, and client success.
+                      {t.visionDescription}
                     </p>
                   </div>
                 </div>
@@ -63,9 +65,9 @@ export default function AboutSection() {
                     <span className="text-primary-green text-2xl">💡</span>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-2">Our Values</h3>
+                    <h3 className="text-white font-semibold mb-2">{t.ourValues}</h3>
                     <p className="text-white/60">
-                      Integrity, innovation, and excellence guide everything we do. We are committed to delivering solutions that make a difference.
+                      {t.valuesDescription}
                     </p>
                   </div>
                 </div>
@@ -74,9 +76,9 @@ export default function AboutSection() {
                     <span className="text-primary-green text-2xl">🚀</span>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-2">Our Approach</h3>
+                    <h3 className="text-white font-semibold mb-2">{t.ourApproach}</h3>
                     <p className="text-white/60">
-                      We work collaboratively with our clients, ensuring transparency, communication, and alignment throughout the entire process.
+                      {t.approachDescription}
                     </p>
                   </div>
                 </div>
