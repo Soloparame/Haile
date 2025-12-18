@@ -54,8 +54,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:info@devcore.com" className="text-white/60 hover:text-primary-green transition-colors text-sm">
-                  info@devcore.com
+                <a href="mailto:rebeccayihenew@gmail.com" className="text-white/60 hover:text-primary-green transition-colors text-sm">
+                  rebeccayihenew@gmail.com
                 </a>
               </li>
             </ul>

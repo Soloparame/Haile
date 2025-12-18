@@ -50,8 +50,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">{t.email}</h3>
-                  <a href="mailto:info@devcore.com" className="text-primary-green hover:underline">
-                    info@devcore.com
+                  <a href="mailto:rebeccayihenew@gmail.com" className="text-primary-green hover:underline">
+                    rebeccayihenew@gmail.com
                   </a>
                 </div>
               </div>
@@ -63,8 +63,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">{t.phone}</h3>
-                  <a href="tel:+1234567890" className="text-primary-green hover:underline">
-                    +1 (234) 567-890
+                  <a href="tel:+251989991524" className="text-primary-green hover:underline">
+                    +251 98 999 1524
                   </a>
                 </div>
               </div>
