@@ -1,3 +1,5 @@
+ 'use client'
+
 import ServicesSection from '@/components/ServicesSection'
 import TechStackSection from '@/components/TechStackSection'
 import { motion } from 'framer-motion'

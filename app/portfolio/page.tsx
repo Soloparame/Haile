@@ -1,3 +1,5 @@
+ 'use client'
+
 import PortfolioSection from '@/components/PortfolioSection'
 import { motion } from 'framer-motion'
 import { portfolioItems } from '@/constants/data'
