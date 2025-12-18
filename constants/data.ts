@@ -40,25 +40,68 @@ export const services = [
 export const ourProducts = [
   {
     id: 1,
-    title: 'Product One',
-    description: 'Description of your first amazing product.',
+    title: 'Deepfake Video Detection',
+    description: 'AI-powered system to detect and flag manipulated and deepfake videos.',
     image: '/product-placeholder.jpg',
-    link: '#'
+    link: '#',
+    icon: '🎭',
   },
   {
     id: 2,
-    title: 'Product Two',
-    description: 'Description of your second amazing product.',
+    title: 'Piggipal React Website',
+    description: 'Modern React website and dashboard for the Piggipal financial platform.',
     image: '/product-placeholder.jpg',
-    link: '#'
+    link: '#',
+    icon: '💻',
   },
   {
     id: 3,
-    title: 'Product Three',
-    description: 'Description of your third amazing product.',
+    title: 'Elderly Care Flutter App',
+    description: 'Flutter mobile app that helps elderly users manage reminders and daily tasks.',
     image: '/product-placeholder.jpg',
-    link: '#'
-  }
+    link: '#',
+    icon: '👵',
+  },
+  {
+    id: 4,
+    title: 'DermaLink Website',
+    description: 'Clean, responsive website for dermatology services with booking features.',
+    image: '/product-placeholder.jpg',
+    link: '#',
+    icon: '💊',
+  },
+  {
+    id: 5,
+    title: 'Tina Mart E‑commerce App',
+    description: 'E‑commerce app with product listing, cart, and checkout for Tina Mart.',
+    image: '/product-placeholder.jpg',
+    link: '#',
+    icon: '🛒',
+  },
+  {
+    id: 6,
+    title: 'Tenagari Andebet for Girls',
+    description: 'Awareness and educational app focused on empowering girls.',
+    image: '/product-placeholder.jpg',
+    link: '#',
+    icon: '👧',
+  },
+  {
+    id: 7,
+    title: 'UI/UX & Figma Design System',
+    description: 'Professional UI/UX design system and Figma components for web and mobile.',
+    image: '/product-placeholder.jpg',
+    link: '#',
+    icon: '🎨',
+  },
+  {
+    id: 8,
+    title: 'QR Scanner App',
+    description: 'Fast and simple QR code scanner app for mobile devices.',
+    image: '/product-placeholder.jpg',
+    link: '#',
+    icon: '📱',
+  },
 ]
 
 export const techStack = [

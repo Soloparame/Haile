@@ -42,10 +42,9 @@ export default function OurProductsSection() {
                             transition={{ delay: index * 0.1 }}
                             className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-primary-green/50 transition-all duration-300 group"
                         >
-                            <div className="h-48 bg-gray-800 relative">
-                                {/* Placeholder for product image - using a colored div for now since we don't have real images yet */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-white/20 text-4xl font-bold">
-                                    {product.title[0]}
+                            <div className="h-48 bg-gradient-to-br from-primary-green/10 via-gray-800 to-gray-900 relative">
+                                <div className="absolute inset-0 flex items-center justify-center text-white/80 text-5xl">
+                                    {product.icon ?? product.title[0]}
                                 </div>
                             </div>
 
