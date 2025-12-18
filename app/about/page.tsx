@@ -1,15 +1,15 @@
+'use client'
+
+import React from 'react'
 import AboutSection from '@/components/AboutSection'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 
 export default function AboutPage() {
   return (
     <div className="pt-20">
       <section className="py-20 bg-primary-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
@@ -18,35 +18,27 @@ export default function AboutPage() {
             <p className="text-xl text-white/70 leading-relaxed">
               We are a team of passionate developers, designers, and engineers dedicated to transforming your ideas into reality.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
       <AboutSection />
-      
+
       {/* Team Section */}
       <section className="py-20 bg-primary-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Our Team</h2>
             <p className="text-white/60 text-lg max-w-2xl mx-auto">
               Meet the talented individuals who make DevCore great.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((item) => (
-              <motion.div
+              <div
                 key={item}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: item * 0.1 }}
                 className="bg-primary-gray-light border border-primary-green/20 rounded-lg p-8 text-center"
               >
                 <div className="w-24 h-24 rounded-full bg-primary-green/20 border border-primary-green/30 flex items-center justify-center mx-auto mb-6">
@@ -59,7 +51,7 @@ export default function AboutPage() {
                 <p className="text-white/60">
                   Experienced professional with expertise in modern web technologies and design principles.
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -67,4 +59,3 @@ export default function AboutPage() {
     </div>
   )
 }
-
