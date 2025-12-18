@@ -10,21 +10,21 @@ export default function PricingPage() {
     const plans = [
         {
             name: 'Starter',
-            price: '$999',
-            description: 'Perfect for small businesses just getting started.',
-            features: ['5 Page Website', 'Mobile Responsive', 'Contact Form', '1 Month Support']
+            price: '35,000 ETB',
+            description: 'Perfect for small businesses and personal brands just getting started.',
+            features: ['Up to 5 Pages', 'Mobile Responsive', 'Contact Form', 'Basic SEO', '1 Month Support']
         },
         {
             name: 'Professional',
-            price: '$2,499',
-            description: 'Everything you need to grow your business.',
-            features: ['10 Page Website', 'Blog Integration', 'SEO Optimization', '3 Months Support', 'Analytics']
+            price: '75,000 ETB',
+            description: 'Ideal for growing businesses that need more features and flexibility.',
+            features: ['Up to 12 Pages', 'Blog or News Section', 'Advanced SEO Setup', 'Analytics Integration', '3 Months Support']
         },
         {
             name: 'Enterprise',
-            price: 'Custom',
-            description: 'Advanced solutions for large organizations.',
-            features: ['Custom Web App', 'Database Integration', 'User Authentication', 'Priority Support', 'Cloud Hosting']
+            price: 'Custom (ETB)',
+            description: 'Advanced, fully custom solutions for larger organizations and complex systems.',
+            features: ['Custom Web or Mobile App', 'Database & API Integration', 'User Authentication', 'Cloud Infrastructure', 'Priority Support']
         }
     ]
 

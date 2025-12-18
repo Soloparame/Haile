@@ -36,10 +36,10 @@ export default function PortfolioSection({ showHeading = true }: PortfolioSectio
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-primary-gray-light border border-primary-green/20 rounded-lg p-6 hover:border-primary-green/40 transition-all group"
             >
-              {/* Avatar Placeholder */}
+              {/* Icon / Avatar */}
               <div className="w-16 h-16 rounded-full bg-primary-green/20 mb-4 flex items-center justify-center border border-primary-green/30 group-hover:border-primary-green/50 transition-colors">
                 <span className="text-primary-green text-2xl font-bold">
-                  {item.title.charAt(0)}
+                  {item.icon ?? item.title.charAt(0)}
                 </span>
               </div>
 

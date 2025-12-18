@@ -54,7 +54,7 @@ export default function PortfolioPage() {
               >
                 <div className="w-20 h-20 rounded-full bg-primary-green/20 mb-6 flex items-center justify-center border border-primary-green/30 group-hover:border-primary-green/50 transition-colors">
                   <span className="text-primary-green text-3xl font-bold">
-                    {item.title.charAt(0)}
+                    {item.icon ?? item.title.charAt(0)}
                   </span>
                 </div>
                 <h3 className="text-white font-semibold mb-3 text-lg">{item.title}</h3>

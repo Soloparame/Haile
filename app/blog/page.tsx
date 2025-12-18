@@ -14,7 +14,8 @@ export default function BlogPage() {
             excerpt: 'In today\'s digital age, having a strong online presence is crucial. Learn how a website attracts more customers.',
             date: 'Dec 8, 2024',
             author: 'Haile',
-            category: 'Business'
+            category: 'Business',
+            icon: '📈'
         },
         {
             id: 2,
@@ -22,7 +23,8 @@ export default function BlogPage() {
             excerpt: 'First impressions count. Discover why good design builds trust and professionalism for your brand.',
             date: 'Dec 5, 2024',
             author: 'Team DevCore',
-            category: 'Design'
+            category: 'Design',
+            icon: '🎨'
         },
         {
             id: 3,
@@ -30,7 +32,8 @@ export default function BlogPage() {
             excerpt: 'Exploring the rapidly growing technology landscape in Ethiopia and what it means for businesses.',
             date: 'Nov 28, 2024',
             author: 'Haile',
-            category: 'Technology'
+            category: 'Technology',
+            icon: '💡'
         }
     ]
 
@@ -53,10 +56,11 @@ export default function BlogPage() {
                             transition={{ delay: index * 0.1 }}
                             className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-primary-green/50 transition-all duration-300 group cursor-pointer"
                         >
-                            <div className="h-48 bg-gray-800 relative group-hover:scale-105 transition-transform duration-500">
-                                {/* Placeholder for blog image */}
-                                <div className="absolute inset-0 flex items-center justify-center text-white/10 text-4xl font-bold bg-gradient-to-tr from-gray-700 to-gray-900">
-                                    Blog Image
+                            <div className="h-48 bg-gradient-to-tr from-primary-green/10 via-gray-800 to-gray-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <span className="text-5xl">
+                                        {post.icon}
+                                    </span>
                                 </div>
                             </div>
 
