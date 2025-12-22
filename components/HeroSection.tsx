@@ -8,7 +8,7 @@ export default function HeroSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section className="relative min-h-[100dvh] flex items-center overflow-hidden pt-20">
       {/* Background Glow Effects */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary-green/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 glow-green-soft" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary-green/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 glow-green-soft" />
@@ -17,14 +17,14 @@ export default function HeroSection() {
       <div className="absolute inset-0 grid-pattern opacity-50" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-8"
+              className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-6 lg:mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-primary-green animate-pulse" />
               <span className="text-primary-green text-sm font-medium">Available for new projects</span>
@@ -34,7 +34,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
+              className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-4 lg:mb-6 leading-tight"
             >
               {t.heroTitle}
             </motion.h1>
@@ -43,7 +43,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg text-white/80 mb-10 max-w-2xl mx-auto lg:mx-0"
+              className="text-base sm:text-lg text-white/80 mb-8 lg:mb-10 max-w-2xl mx-auto lg:mx-0"
             >
               {t.heroSubtitle}
             </motion.p>

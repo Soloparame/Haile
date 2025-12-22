@@ -88,37 +88,61 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden py-4 space-y-4 border-t border-primary-green/10"
+            className="md:hidden py-4 space-y-4 border-t border-primary-green/10 bg-primary-dark/95 backdrop-blur-sm"
           >
-            <Link href="/product" className="block text-white/80 hover:text-primary-green transition-colors">
+            <Link
+              href="/product"
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-4 py-2 text-white/80 hover:text-primary-green hover:bg-white/5 transition-colors rounded-lg"
+            >
               {t.product}
             </Link>
-            <Link href="/pricing" className="block text-white/80 hover:text-primary-green transition-colors">
+            <Link
+              href="/pricing"
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-4 py-2 text-white/80 hover:text-primary-green hover:bg-white/5 transition-colors rounded-lg"
+            >
               {t.pricing}
             </Link>
-            <Link href="/company" className="block text-white/80 hover:text-primary-green transition-colors">
+            <Link
+              href="/company"
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-4 py-2 text-white/80 hover:text-primary-green hover:bg-white/5 transition-colors rounded-lg"
+            >
               {t.company}
             </Link>
-            <Link href="/blog" className="block text-white/80 hover:text-primary-green transition-colors">
+            <Link
+              href="/blog"
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-4 py-2 text-white/80 hover:text-primary-green hover:bg-white/5 transition-colors rounded-lg"
+            >
               {t.blog}
             </Link>
-            <Link href="/faq" className="block text-white/80 hover:text-primary-green transition-colors">
+            <Link
+              href="/faq"
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-4 py-2 text-white/80 hover:text-primary-green hover:bg-white/5 transition-colors rounded-lg"
+            >
               {t.faq}
             </Link>
 
             <button
               onClick={toggleLanguage}
-              className="w-full text-left px-3 py-1 text-white hover:text-primary-green transition-colors"
+              className="w-full text-left px-4 py-2 text-white hover:text-primary-green hover:bg-white/5 transition-colors rounded-lg flex items-center gap-2"
             >
-              {language === 'en' ? '🇪🇹 Switch to Amharic' : '🇺🇸 Switch to English'}
+              <span>{language === 'en' ? '🇪🇹' : '🇺🇸'}</span>
+              {language === 'en' ? 'Switch to Amharic' : 'Switch to English'}
             </button>
 
-            <Link
-              href="/contact"
-              className="inline-block px-6 py-2.5 bg-primary-green text-primary-dark font-medium rounded-lg glow-green"
-            >
-              {t.contactUs}
-            </Link>
+            <div className="px-4 pt-2">
+              <Link
+                href="/contact"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-center px-6 py-3 bg-primary-green text-primary-dark font-medium rounded-lg glow-green hover:bg-primary-green/90 transition-all"
+              >
+                {t.contactUs}
+              </Link>
+            </div>
           </motion.div>
         )}
       </nav>
