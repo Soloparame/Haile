@@ -8,105 +8,58 @@ export default function HeroSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center overflow-hidden pt-20">
-      {/* Background Glow Effects */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary-green/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 glow-green-soft" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-green/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 glow-green-soft" />
+    <section className="relative min-h-[100dvh] flex items-center overflow-hidden pt-24 sm:pt-28 pb-16 bg-background">
+      {/* Circle gradients - WubSites style */}
+      <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] bg-primary-green/25 rounded-full blur-[100px] sm:blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] bg-primary-green/15 rounded-full blur-[100px] sm:blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary-green/10 rounded-full blur-[80px] pointer-events-none" />
 
-      {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 grid-pattern opacity-50" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-          {/* Text Content */}
-          <div className="flex-1 text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-6 lg:mb-8"
-            >
-              <span className="w-2 h-2 rounded-full bg-primary-green animate-pulse" />
-              <span className="text-primary-green text-sm font-medium">Available for new projects</span>
-            </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-4 lg:mb-6 leading-tight"
-            >
-              {t.heroTitle}
-            </motion.h1>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+        <div className="w-full max-w-6xl flex flex-col items-center">
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-base sm:text-lg text-white/80 mb-8 lg:mb-10 max-w-2xl mx-auto lg:mx-0"
-            >
-              {t.heroSubtitle}
-            </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
-            >
-              <Link
-                href="/contact"
-                className="px-8 py-4 bg-primary-green text-primary-dark font-semibold rounded-lg glow-green hover:bg-primary-green/90 transition-all text-lg w-full sm:w-auto text-center"
-              >
-                {t.contactUs}
-              </Link>
-              <Link
-                href="/services"
-                className="px-8 py-4 bg-transparent border-2 border-primary-green text-primary-green font-semibold rounded-lg hover:bg-primary-green/10 transition-all text-lg w-full sm:w-auto text-center"
-              >
-                {t.learnMore}
-              </Link>
-            </motion.div>
-          </div>
-
-          {/* Image Content */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="flex-1 w-full max-w-xs lg:max-w-sm mx-auto"
+          {/* Line-by-line headline - WubSites style */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mb-6 md:mb-8"
           >
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary-green/20 to-blue-500/20 rounded-2xl blur-xl" />
-              <img
-                src="/hero-image.png"
-                alt="Digital Solutions"
-                className="relative w-full h-auto rounded-2xl shadow-2xl border border-white/10"
-              />
+            <span className="hero-headline-line text-foreground">{t.heroLine1}</span>
+            <span className="hero-headline-line text-foreground">{t.heroLine2}</span>
+            <span className="hero-headline-line text-foreground">{t.heroLine3}</span>
+            <span className="hero-headline-line bg-clip-text text-transparent bg-gradient-to-r from-primary-green via-emerald-400 to-teal-500">
+              {t.heroLine4}
+            </span>
+          </motion.h1>
 
-              {/* Floating Elements */}
-              <motion.div
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-8 -right-8 bg-gray-900/90 backdrop-blur-sm p-4 rounded-xl border border-white/10 shadow-xl hidden md:block"
-              >
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-white font-bold">100% Success</div>
-                    <div className="text-xs text-gray-400">Project Completion</div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
+
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.45 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-10"
+          >
+            <Link
+              href="/contact"
+              className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary-green text-gray-950 font-bold rounded-full text-sm uppercase tracking-wide hover:bg-primary-green/90 transition-all duration-300 shadow-[0_0_30px_rgba(0,255,136,0.3)] hover:shadow-[0_0_40px_rgba(0,255,136,0.5)] hover:-translate-y-1"
+            >
+              {t.getQuoteNow}
+              <span aria-hidden className="group-hover:translate-x-1.5 transition-transform duration-300">➔</span>
+            </Link>
+            <Link
+              href="/services"
+              className="inline-flex items-center px-8 py-4 rounded-full border border-surface-border bg-surface/30 backdrop-blur-md text-foreground font-medium hover:border-primary-green/50 hover:text-primary-green hover:bg-surface/60 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-lg"
+            >
+              {t.learnMore}
+            </Link>
           </motion.div>
         </div>
       </div>
     </section>
   )
 }
-

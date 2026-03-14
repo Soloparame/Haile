@@ -11,8 +11,15 @@ export const translations = {
         // Home
         heroTitle: 'We Build Websites That Help You Business',
         heroSubtitle: 'Simple, effective, and beautiful websites for your company.',
+        getQuoteNow: 'Get a quote now',
         getStarted: 'Get Started',
         learnMore: 'Learn More',
+        heroLine1: 'We Design',
+        heroLine2: 'Beautiful Websites',
+        heroLine3: 'That Will Strengthen',
+        heroLine4: 'Your Brand!',
+        heroSubline1: 'Professional Web Design & Development',
+        heroSubline2: '…and Increase Sales',
 
         // Sections
         ourServices: 'Our Services',
@@ -121,8 +128,15 @@ export const translations = {
         // Home
         heroTitle: 'ንግድዎን የሚያግዙ ድረ-ገጾችን እንገነባለን',
         heroSubtitle: 'ለድርጅትዎ ቀላል፣ ውጤታማ እና ውብ ድረ-ገጾች።',
+        getQuoteNow: 'ዋጋ ያግኙ',
         getStarted: 'ጀምር',
         learnMore: 'ተጨማሪ ይወቁ',
+        heroLine1: 'ውብ',
+        heroLine2: 'ድረ-ገጾችን',
+        heroLine3: 'እንገነባለን',
+        heroLine4: 'ብራንድዎን ያጠነክራሉ!',
+        heroSubline1: 'ፕሮፌሽናል ድረ-ገጽ ዲዛይን እና ልማት',
+        heroSubline2: '…እና ሽያጭ ይጨምሩ',
 
         // Sections
         ourServices: 'አገልግሎቶቻችን',

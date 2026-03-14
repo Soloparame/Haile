@@ -1,22 +1,18 @@
 'use client'
 
-import React from 'react'
 import AboutSection from '@/components/AboutSection'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { useLanguage } from '@/context/LanguageContext'
+import PageHero from '@/components/PageHero'
 
 export default function CompanyPage() {
-    const { t } = useLanguage()
-    return (
-        <div className="pt-20">
-            <div className="bg-primary-dark py-16 text-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{t.company}</h1>
-                <p className="text-gray-400 max-w-2xl mx-auto px-4">
-                    {t.aboutDevCoreSubtitle}
-                </p>
-            </div>
-            <AboutSection />
-            <TestimonialsSection />
-        </div>
-    )
+  const { t } = useLanguage()
+
+  return (
+    <div>
+      <PageHero title={t.company} subtitle={t.aboutDevCoreSubtitle} />
+      <AboutSection />
+      <TestimonialsSection />
+    </div>
+  )
 }

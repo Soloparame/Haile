@@ -1,63 +1,48 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { portfolioItems } from '@/constants/data'
 
 interface PortfolioSectionProps {
   showHeading?: boolean
 }
 
+// Replaced portfolio with partners to act as a marquee
+const partners = [
+  "Microsoft", "Google Go", "Amazon AWS", "Stripe", "Figma",
+  "Vercel", "OpenAI", "Netflix", "Spotify", "Meta", "Supabase"
+]
+
 export default function PortfolioSection({ showHeading = true }: PortfolioSectionProps) {
+  // Duplicating the array so we can infinitely loop it
+  const marqueeItems = [...partners, ...partners]
+
   return (
-    <section className={`${showHeading ? 'py-20' : 'pb-20 pt-12'} bg-primary-dark`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {showHeading && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Our Portfolio</h2>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              Explore some of our recent projects and see how we&apos;ve helped businesses succeed.
-            </p>
-          </motion.div>
-        )}
+    <section className="py-12 md:py-16 bg-surface overflow-hidden border-t border-b border-surface-border transition-colors duration-300">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
+        <h3 className="text-text-muted text-sm font-bold uppercase tracking-widest">Trusted by industry leaders and our global partners</h3>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          {portfolioItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-primary-gray-light border border-primary-green/20 rounded-lg p-6 hover:border-primary-green/40 transition-all group"
+      <div className="relative flex w-full overflow-hidden whitespace-nowrap mask-image-gradient">
+        {/* We use an arbitrary mask image gradient to fade out edges if tailwind allows, else standard */}
+        <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-surface to-transparent z-10"></div>
+        <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-surface to-transparent z-10"></div>
+
+        <motion.div
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+          className="flex gap-12 md:gap-24 items-center min-w-full px-6"
+        >
+          {marqueeItems.map((partner, index) => (
+            <div
+              key={`${partner}-${index}`}
+              className="px-6 py-4 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
             >
-              {/* Icon / Avatar */}
-              <div className="w-16 h-16 rounded-full bg-primary-green/20 mb-4 flex items-center justify-center border border-primary-green/30 group-hover:border-primary-green/50 transition-colors">
-                <span className="text-primary-green text-2xl font-bold">
-                  {item.icon ?? item.title.charAt(0)}
-                </span>
-              </div>
-
-              <h3 className="text-white font-semibold mb-2 text-sm leading-tight">
-                {item.title}
-              </h3>
-              <p className="text-white/60 text-xs mb-4 line-clamp-2">
-                {item.description}
-              </p>
-              <div className="flex items-center text-primary-green text-xs">
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-                </svg>
-                <span>{item.supporters} {item.type}</span>
-              </div>
-            </motion.div>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-foreground">
+                {partner}
+              </h2>
+            </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

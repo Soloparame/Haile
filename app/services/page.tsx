@@ -1,44 +1,32 @@
- 'use client'
+'use client'
 
 import ServicesSection from '@/components/ServicesSection'
 import TechStackSection from '@/components/TechStackSection'
+import PageHero from '@/components/PageHero'
 import { motion } from 'framer-motion'
 
 export default function ServicesPage() {
   return (
-    <div className="pt-20">
-      <section className="py-20 bg-primary-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl text-white/70 leading-relaxed">
-              Comprehensive solutions to help your business grow and succeed in the digital world.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <div>
+      <PageHero
+        title="Our Services"
+        subtitle="Comprehensive solutions to help your business grow and succeed in the digital world."
+      />
       <ServicesSection />
       <TechStackSection />
 
-      {/* Process Section */}
-      <section className="py-20 bg-primary-dark">
+      {/* Process Section - WubSites style */}
+      <section className="py-16 md:py-24 bg-surface transition-colors duration-300">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-14 md:mb-16"
           >
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Our Process</h2>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto">
+            <h2 className="section-heading mb-4">Our Process</h2>
+            <p className="section-subheading">
               A proven methodology to deliver exceptional results.
             </p>
           </motion.div>
@@ -58,11 +46,11 @@ export default function ServicesPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-primary-green/20 border border-primary-green/30 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-primary-green text-2xl font-bold">{item.step}</span>
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-primary-green/20 border border-primary-green/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-primary-green text-xl md:text-2xl font-bold">{item.step}</span>
                 </div>
-                <h3 className="text-white text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-white/60">{item.desc}</p>
+                <h3 className="text-foreground text-lg md:text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-text-muted text-sm md:text-base">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -71,4 +59,3 @@ export default function ServicesPage() {
     </div>
   )
 }
-
