@@ -8,8 +8,9 @@ interface PortfolioSectionProps {
 
 // Replaced portfolio with partners to act as a marquee
 const partners = [
-  "Microsoft", "Google Go", "Amazon AWS", "Stripe", "Figma",
-  "Vercel", "OpenAI", "Netflix", "Spotify", "Meta", "Supabase"
+  "Madeg Foundation",
+  "Wos Caffe",
+  "Tech sisters",
 ]
 
 export default function PortfolioSection({ showHeading = true }: PortfolioSectionProps) {

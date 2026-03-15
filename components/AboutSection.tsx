@@ -26,15 +26,15 @@ export default function AboutSection() {
             </p>
             <div className="flex flex-wrap gap-4 mt-10">
               <div className="bg-surface/60 backdrop-blur-md border border-primary-green/10 rounded-[20px] px-6 py-5 flex-1 min-w-[140px] shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="text-3xl font-black text-primary-green mb-1">500+</div>
+                <div className="text-3xl font-black text-primary-green mb-1">10+</div>
                 <div className="text-text-muted text-xs font-bold uppercase tracking-wider">{t.projectsCompleted}</div>
               </div>
               <div className="bg-surface/60 backdrop-blur-md border border-primary-green/10 rounded-[20px] px-6 py-5 flex-1 min-w-[140px] shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="text-3xl font-black text-primary-green mb-1">200+</div>
+                <div className="text-3xl font-black text-primary-green mb-1">4+</div>
                 <div className="text-text-muted text-xs font-bold uppercase tracking-wider">{t.happyClients}</div>
               </div>
               <div className="bg-surface/60 backdrop-blur-md border border-primary-green/10 rounded-[20px] px-6 py-5 flex-1 min-w-[140px] shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="text-3xl font-black text-primary-green mb-1">10+</div>
+                <div className="text-3xl font-black text-primary-green mb-1">3+</div>
                 <div className="text-text-muted text-xs font-bold uppercase tracking-wider">{t.yearsExperience}</div>
               </div>
             </div>
